@@ -1,4 +1,4 @@
-import {Schema, model, Document} from 'mongoose'
+import { Schema, model, Document } from 'mongoose'
 
 const schema = new Schema({
     title: String,
@@ -6,10 +6,10 @@ const schema = new Schema({
     imagePath: String
 });
 
-interface Photo extends Document {
+export interface IPhoto extends Document {
     title: string;
     description: string;
     imagePath: string;
 }
 
-export default model<Photo>('Photo', schema);
+export default model<IPhoto>('Photo', schema);
